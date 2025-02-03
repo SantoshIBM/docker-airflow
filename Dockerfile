@@ -7,6 +7,10 @@
 FROM python:3.7-slim-buster
 LABEL maintainer="Puckel_"
 
+# Add custom requirements
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
 # Never prompt the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
