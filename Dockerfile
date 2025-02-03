@@ -4,7 +4,7 @@
 # BUILD: docker build --rm -t puckel/docker-airflow .
 # SOURCE: https://github.com/puckel/docker-airflow
 
-FROM apache/airflow:2.10.4-python3.11
+FROM python:3.7-slim-buster
 LABEL maintainer="Puckel_"
 
 # Add custom requirements
